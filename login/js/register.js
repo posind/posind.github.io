@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Kirim data ke server menggunakan fetch
     fetch(
-      "https://asia-southeast2-civil-epigram-429004-t8.cloudfunctions.net/webhook/endpoint_user/user",
+      "https://asia-southeast2-civil-epigram-429004-t8.cloudfunctions.net/webhook/register",
       {
         method: "POST",
         headers: {
