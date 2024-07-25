@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
   
       // Ambil nilai input dari form
-      const fullname = document.getElementById("username").value;
+      const username = document.getElementById("username").value;
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
       
   
       // Siapkan data untuk dikirim ke server
       const data = {
-        fullname: fullname,
+        username: username,
         email: email,
         password: password,
       };
