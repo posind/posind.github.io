@@ -1,40 +1,38 @@
-// Burger menus
-document.addEventListener('DOMContentLoaded', function() {
-    // open
-    const burger = document.querySelectorAll('.navbar-burger');
-    const menu = document.querySelectorAll('.navbar-menu');
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-    if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const loginDetails = {
+      email: email,
+      password: password,
+    };
+
+    try {
+      const response = await fetch(
+        "https://asia-southeast2-blkkalittifaq-426014.cloudfunctions.net/blkkalittifaq/data/user",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loginDetails),
         }
-    }
+      );
 
-    // close
-    const close = document.querySelectorAll('.navbar-close');
-    const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-    if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
+      if (response.ok) {
+        const user = await response.json();
+        // Store user information in local storage or cookie if needed
+        // Redirect to the admin dashboard
+        window.location.href = "https://pos.in.my.id/dashboard/";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      document.getElementById("error").style.display = "block";
     }
-
-    if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-});
+  });
