@@ -1,38 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Login</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
-    
-</head>
-<body class="antialiased bg-body text-body font-body">    
-      <section class="py-20">
-        <form id="loginForm" class="container px-4 mx-auto">
-          <div class="max-w-md mx-auto py-12 px-8 bg-gray-50 rounded-lg text-center">
-            <span class="text-sm text-gray-500 font-semibold uppercase">Login</span>
-            <h3 class="mb-8 text-3xl font-bold font-heading">Log in to your account</h3>
-            <div class="inputbox">
-              <input class="w-full py-3 pl-3 mb-4 bg-white rounded-lg" type="email" placeholder="Email" id="email" name="email" required />
-              <input class="w-full py-3 pl-3 mb-4 bg-white rounded-lg" type="password" placeholder="Password" id="password" name="password" required />
-              <button type="submit" class="block w-full mb-4 px-5 py-3 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200">Get Started</button>
-              <p id="error" style="display: none; color: red">
-                Invalid email or password. Please try again.
-              </p>
-              <p class="text-sm text-gray-500">
-                <span>Don't have an account yet? </span>
-                <a class="font-bold hover:underline" href="register.html">Registration</a>
-              </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In / Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/log-re.css" />
+  </head>
+  <body class="bg-gray-800 text-gray-300">
+    <div class="flex justify-center items-center min-h-screen">
+      <div class="w-full max-w-md">
+        <div class="text-center mb-6">
+          <h6 class="mb-3 flex justify-center">
+            <span class="px-5 uppercase font-bold">Log In</span>
+            <span class="px-5 uppercase font-bold">Register</span>
+          </h6>
+          <input class="hidden" type="checkbox" id="reg-log" name="reg-log" />
+          <label
+            for="reg-log"
+            class="block mx-auto w-16 h-4 bg-yellow-400 rounded-full relative cursor-pointer"
+          >
+            <div
+              class="w-9 h-9 bg-blue-900 text-yellow-400 rounded-full flex items-center justify-center absolute top-[-10px] left-[-10px] transform transition-transform duration-500 ease-in-out"
+              id="toggle-icon"
+            >
+              ⇋
             </div>
-              <a class="text-sm text-gray-500 hover:underline" href="#">Forgot password?</a>
+          </label>
+        </div>
+        <!-- login -->
+        <div class="relative perspective">
+          <div
+            class="relative w-full h-96 transition-transform duration-700 transform-style preserve-3d"
+            id="card-3d-wrapper"
+          >
+            <div
+              class="absolute w-full h-full bg-gray-700 bg-cover bg-center rounded-lg backface-hidden"
+              id="card-front"
+            >
+              <div class="flex justify-center items-center h-full">
+                <div id="loginForm" class="w-11/12 p-5">
+                  <h4 class="mb-4 pb-3 text-center text-xl font-bold">
+                    Log In
+                  </h4>
+                  <div class="mb-4 relative">
+                    <input
+                      type="email"
+                      id="logemail"
+                      name="email"
+                      placeholder="Your Email"
+                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      autocomplete="off"
+                      required
+                    />
+                    <i
+                      class="fas fa-envelope input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                    ></i>
+                  </div>
+                  <div class="mb-4 relative">
+                    <input
+                      type="password"
+                      id="logpass"
+                      name="password"
+                      placeholder="Your Password"
+                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      autocomplete="off"
+                      required
+                    />
+                    <i
+                      class="fas fa-lock input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                    ></i>
+                  </div>
+                  <div class="show-password">
+                    <input type="checkbox" id="show-password" />
+                    <label for="show-password">Show Password</label>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn w-full py-3 mt-4 text-center bg-yellow-400 text-blue-900 rounded-lg shadow-md transition duration-200 hover:bg-blue-900 hover:text-yellow-400"
+                  >
+                    Submit
+                  </button>
+                  <p class="mt-4 text-center">
+                    <a
+                      href="#0"
+                      class="link text-gray-400 hover:text-yellow-400"
+                      >Forgot your password?</a
+                    >
+                  </p>
+                  <p id="error" style="display: none; color: red">
+                    Invalid email or password. Please try again.
+                  </p>
+                </div>
+              </div>
             </div>
-          </form>
-      </section>
-      <script src="js/main.js"></script>
-      <script src="js/login.js"></script>
-</body>
+            <!-- register -->
+            <div
+              class="absolute w-full h-full bg-gray-700 bg-cover bg-center rounded-lg backface-hidden transform rotateY-180"
+              id="card-back"
+            >
+              <div class="flex justify-center items-center h-full">
+                <div class="w-11/12 p-5">
+                  <h4 class="mb-4 pb-3 text-center text-xl font-bold">
+                    Register
+                  </h4>
+                  <div class="mb-4 relative">
+                    <input
+                      type="text"
+                      id="username"
+                      name="username"
+                      placeholder="Username"
+                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      autocomplete="off"
+                      required
+                    />
+                    <i
+                      class="fas fa-user input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                    ></i>
+                  </div>
+                  <div class="mb-4 relative">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Your Email"
+                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      autocomplete="off"
+                      required
+                    />
+                    <i
+                      class="fas fa-envelope input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                    ></i>
+                  </div>
+                  <div class="mb-4 relative">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="Your Password"
+                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      autocomplete="off"
+                      required
+                    />
+                    <i
+                      class="fas fa-lock input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                    ></i>
+                  </div>
+                  <div class="show-password">
+                    <input type="checkbox" id="show-password" />
+                    <label for="show-password">Show Password</label>
+                  </div>
+                  <button
+                    id="registerButton"
+                    type="submit"
+                    class="btn w-full py-3 mt-4 text-center bg-yellow-400 text-blue-900 rounded-lg shadow-md transition duration-200 hover:bg-blue-900 hover:text-yellow-400"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector("#reg-log")
+        .addEventListener("change", function () {
+          document
+            .querySelector("#card-3d-wrapper")
+            .classList.toggle("rotateY-180");
+          const toggleIcon = document.querySelector("#toggle-icon");
+          if (document.querySelector("#reg-log").checked) {
+            toggleIcon.style.transform = "translateX(44px) rotate(90deg)";
+          } else {
+            toggleIcon.style.transform = "translateX(0) rotate(90deg)";
+          }
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/log-reg.js"></script>
+  </body>
 </html>
-
