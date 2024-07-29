@@ -91,15 +91,23 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  // Event listener untuk checkbox "Show Password"
-  document
-    .getElementById("show-password")
-    .addEventListener("change", function () {
-      const password = document.getElementById("password");
-      if (this.checked) {
-        password.type = "text";
-      } else {
-        password.type = "password";
-      }
-    });
+  // Event listener untuk checkbox "Show Password" pada login
+document.getElementById("show-password-login").addEventListener("change", function () {
+    const password = document.getElementById("logpass");
+    if (this.checked) {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  });
+
+  // Event listener untuk checkbox "Show Password" pada register
+document.getElementById("show-password-register").addEventListener("change", function () {
+    const password = document.getElementById("password");
+    if (this.checked) {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  });
 });
