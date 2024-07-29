@@ -30,6 +30,8 @@ document
         // Redirect to the admin dashboard
         window.location.href = "https://pos.in.my.id/dashboard/";
       } else {
+        const errorData = await response.json();
+        console.error("Error:", errorData);
         document.getElementById("error").style.display = "block";
       }
     } catch (error) {
@@ -70,7 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
     )
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          return response.json().then((data) => {
+            throw new Error(data.message || 'Network response was not ok');
+          });
         }
         return response.json();
       })
@@ -82,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("email").value = "";
           document.getElementById("password").value = "";
         } else {
-          alert("Registration : " + data.message);
+          alert("Registration: " + data.message);
         }
       })
       .catch((error) => {
@@ -92,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Event listener untuk checkbox "Show Password" pada login
-document.getElementById("show-password-login").addEventListener("change", function () {
+  document.getElementById("show-password-login").addEventListener("change", function () {
     const password = document.getElementById("logpass");
     if (this.checked) {
       password.type = "text";
@@ -102,7 +106,7 @@ document.getElementById("show-password-login").addEventListener("change", functi
   });
 
   // Event listener untuk checkbox "Show Password" pada register
-document.getElementById("show-password-register").addEventListener("change", function () {
+  document.getElementById("show-password-register").addEventListener("change", function () {
     const password = document.getElementById("password");
     if (this.checked) {
       password.type = "text";
