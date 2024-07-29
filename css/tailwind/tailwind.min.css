@@ -599,6 +599,48 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+
+/* Hijau tajam dan vibrant */
+.border-green-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 225 0 / var(--tw-border-opacity)); /* Hijau tajam dan vibrant */
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 225 0 / var(--tw-bg-opacity)); /* Hijau yang tajam namun tidak terlalu cerah */
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 210 0 / var(--tw-bg-opacity)); /* Sedikit lebih gelap saat hover, tajam */
+}
+
+.focus\:ring-green-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(144 255 100 / var(--tw-ring-opacity)); /* Lebih tajam */
+}
+
+.border-blue-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(29 155 240 / var(--tw-border-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 155 240 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 140 216 / var(--tw-bg-opacity));
+}
+
+.focus\:ring-blue-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -683,6 +725,10 @@ video {
 }
 .text-sm {
   font-size: 0.875rem;
+}
+
+.text-justify {
+  text-align: justify;
 }
 .font-bold {
   font-weight: 700;

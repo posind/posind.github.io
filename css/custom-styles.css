@@ -1,0 +1,45 @@
+/* Tombol WhatsApp */
+.btn-whatsapp {
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    border: 2px solid transparent; /* Menghilangkan border color default */
+    border-radius: 0.75rem;
+    background-color: #3edd09ec;
+    transition: background-color 0.2s ease-in-out, ring-color 0.2s ease-in-out;
+  }
+  
+  .btn-whatsapp:focus {
+    ring-color: rgba(63, 255, 0, 0.3);
+  }
+  
+  /* Tombol Telegram */
+  .btn-telegram {
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    border: 2px solid transparent; /* Menghilangkan border color default */
+    border-radius: 0.75rem;
+    background-color: #0099ff;
+    transition: background-color 0.2s ease-in-out, ring-color 0.2s ease-in-out;
+  }
+  
+  .btn-telegram:focus {
+    ring-color: rgba(0, 153, 255, 0.3);
+  }
+  
+  /* Tambahkan margin-bottom untuk tombol pada tampilan mobile */
+  @media (max-width: 640px) {
+    .btn-whatsapp,
+    .btn-telegram {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Pastikan kontainer tombol tidak saling bertumpuk */
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
