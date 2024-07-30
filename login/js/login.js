@@ -40,11 +40,10 @@ document
     }
   });
 
-
-
-
-  // Event listener untuk checkbox "Show Password" pada login
-  document.getElementById("show-password-login").addEventListener("change", function () {
+// Event listener untuk checkbox "Show Password" pada login
+document
+  .getElementById("show-password-login")
+  .addEventListener("change", function () {
     const password = document.getElementById("logpass");
     if (this.checked) {
       password.type = "text";
