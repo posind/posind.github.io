@@ -4,19 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
   registerButton.addEventListener("click", function (event) {
     event.preventDefault();
 
-    // Ambil nilai input dari form
+    // Get input values from the form
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Siapkan data untuk dikirim ke server
+    // Prepare data to send to the server
     const data = {
       username: username,
       email: email,
       password: password,
     };
 
-    // Kirim data ke server menggunakan fetch
+    // Send data to the server using fetch
     fetch(
       "https://asia-southeast2-civil-epigram-429004-t8.cloudfunctions.net/webhook/register",
       {
@@ -36,9 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then((data) => {
-        if (data.success) {
-          alert("Registrasi Berhasil");
-          // Reset form setelah registrasi berhasil
+        if (data.token) {
+          alert("Registration successful. Your token: " + data.token);
+          // Optionally store the token if needed
+          // localStorage.setItem("token", data.token);
+          // Reset form after successful registration
           document.getElementById("username").value = "";
           document.getElementById("email").value = "";
           document.getElementById("password").value = "";
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Terjadi kesalahan. Silakan coba lagi nanti.");
+        alert("An error occurred. Please try again later.");
       });
   });
 
@@ -56,10 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("show-password-register")
     .addEventListener("change", function () {
       const password = document.getElementById("password");
-      if (this.checked) {
-        password.type = "text";
-      } else {
-        password.type = "password";
-      }
+      password.type = this.checked ? "text" : "password";
     });
 });

@@ -25,8 +25,9 @@ document
       );
 
       if (response.ok) {
-        const user = await response.json();
-        // Store user information in local storage or cookie if needed
+        const data = await response.json();
+        // Store the token in local storage or cookie
+        localStorage.setItem("token", data.token);
         // Redirect to the admin dashboard
         window.location.href = "https://pos.in.my.id/dashboard/";
       } else {
@@ -40,14 +41,10 @@ document
     }
   });
 
-// Event listener untuk checkbox "Show Password" pada login
+// Event listener for "Show Password" checkbox on login
 document
   .getElementById("show-password-login")
   .addEventListener("change", function () {
     const password = document.getElementById("logpass");
-    if (this.checked) {
-      password.type = "text";
-    } else {
-      password.type = "password";
-    }
+    password.type = this.checked ? "text" : "password";
   });
