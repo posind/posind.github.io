@@ -30,7 +30,7 @@ document
         // Store the token in local storage or cookie
         localStorage.setItem("token", data.token);
         // Redirect to the admin dashboard
-        window.location.href = "https://pos.in.my.id/dashboard/";
+        window.location.href = "https://pos.in.my.id/dashboard/index.html";
       } else {
         const errorData = await response.json();
         console.error("Error:", errorData);
