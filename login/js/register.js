@@ -9,12 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    // Basic validation
+    if (!username || !email || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
     // Prepare data to send to the server
     const data = {
       username: username,
       email: email,
       password: password,
     };
+
+    // Show loading spinner
+    document.getElementById("loading-spinner").style.display = "block";
 
     // Send data to the server using fetch
     fetch(
@@ -36,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then((data) => {
+        // Hide loading spinner
+        document.getElementById("loading-spinner").style.display = "none";
+
         if (data.token) {
           alert("Registration successful. Your token: " + data.token);
           // Optionally store the token if needed
@@ -49,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
       .catch((error) => {
+        document.getElementById("loading-spinner").style.display = "none";
         console.error("Error:", error);
         alert("An error occurred. Please try again later.");
       });

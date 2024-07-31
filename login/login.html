@@ -89,10 +89,8 @@
                       Register here
                     </label>
                   </p>
-                  <p id="error" style="display: none; color: red">
-                    Invalid email or password. Please try again.
-                  </p>
                 </form>
+                <div id="error" style="display: none; color: red">An error occurred. Please try again later.</div>
               </div>
             </div>
 
@@ -102,7 +100,7 @@
               id="card-back"
             >
               <div class="flex justify-center items-center h-full">
-                <div class="w-11/12 p-5">
+                <form class="w-11/12 p-5">
                   <h4 class="mb-4 pb-3 text-center text-xl font-bold">
                     Register
                   </h4>
@@ -168,7 +166,8 @@
                       Log in here
                     </label>
                   </p>
-                </div>
+                </form>
+                <div id="loading-spinner" style="display: none;">Loading...</div>
               </div>
             </div>
           </div>
