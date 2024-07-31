@@ -34,11 +34,11 @@ document
       } else {
         const errorData = await response.json();
         console.error("Error:", errorData);
-        document.getElementById("error").style.display = "block";
+        alert("Error: " + (errorData.message || "An error occurred. Please try again later."));
       }
     } catch (error) {
       console.error("Error:", error);
-      document.getElementById("error").style.display = "block";
+      alert("An error occurred. Please try again later.");
     }
   });
 
