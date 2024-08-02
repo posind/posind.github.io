@@ -19,17 +19,17 @@
     <div class="flex justify-center items-center min-h-screen">
       <div class="w-full max-w-md">
         <div class="text-center mb-6">
-          <h6 class="mb-3 flex justify-center">
+          <h6 class="mb-3 flex justify-center text-black">
             <span class="px-5 uppercase font-bold">Log In</span>
             <span class="px-5 uppercase font-bold">Register</span>
           </h6>
           <input class="hidden" type="checkbox" id="reg-log" name="reg-log" />
           <label
             for="reg-log"
-            class="block mx-auto w-16 h-4 bg-yellow-400 rounded-full relative cursor-pointer"
+            class="block mx-auto w-16 h-4 bg-indigo-700 rounded-full relative cursor-pointer"
           >
             <div
-              class="w-9 h-9 bg-blue-900 text-yellow-400 rounded-full flex items-center justify-center absolute top-[-10px] left-[-10px] transform transition-transform duration-500 ease-in-out"
+              class="w-9 h-9 bg-white text-indigo-700 rounded-full flex items-center justify-center absolute top-[-10px] left-[-10px] transform transition-transform duration-500 ease-in-out"
               id="toggle-icon"
             >
               ⇋
@@ -39,21 +39,21 @@
         <!-- login -->
         <div class="relative perspective">
           <div class="relative w-full h-96 transition-transform duration-700 transform-style preserve-3d" id="card-3d-wrapper">
-            <div class="absolute w-full h-full bg-gray-700 bg-cover bg-center rounded-lg backface-hidden" id="card-front">
+            <div class="absolute w-full h-full bg-gray-50 bg-cover bg-center rounded-lg backface-hidden" id="card-front">
               <div class="flex justify-center items-center h-full">
                 <form id="loginForm" class="w-11/12 p-5">
-                  <h4 class="mb-4 pb-3 text-center text-xl font-bold">Log In</h4>
+                  <h4 class="mb-4 pb-3 text-center text-xl font-bold text-black">Log In</h4>
                   <div class="mb-4 relative">
                     <input
                       type="email"
                       id="logemail"
                       name="email"
                       placeholder="Your Email"
-                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      class="form-style w-full px-10 py-3 bg-white rounded-lg outline-none shadow-md placeholder-gray-500"
                       autocomplete="off"
                       required
                     />
-                    <i class="fas fa-envelope input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"></i>
+                    <i class="fas fa-envelope input-icon absolute top-0 left-3 h-full flex items-center text-indigo-700"></i>
                   </div>
                   <div class="mb-4 relative">
                     <input
@@ -61,19 +61,19 @@
                       id="logpass"
                       name="password"
                       placeholder="Your Password"
-                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      class="form-style w-full px-10 py-3 bg-white rounded-lg outline-none shadow-md placeholder-gray-500"
                       autocomplete="off"
                       required
                     />
-                    <i class="fas fa-lock input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"></i>
+                    <i class="fas fa-lock input-icon absolute top-0 left-3 h-full flex items-center text-indigo-700"></i>
                   </div>
                   <div class="show-password">
                     <input type="checkbox" id="show-password-login" />
-                    <label for="show-password-login">Show Password</label>
+                    <label class="text-black" for="show-password-login">Show Password</label>
                   </div>
                   <button
                     type="submit"
-                    class="btn w-full py-3 mt-4 text-center bg-yellow-400 text-blue-900 rounded-lg shadow-md transition duration-200 hover:bg-blue-900 hover:text-yellow-400"
+                    class="btn w-full py-3 mt-4 text-center bg-indigo-700 text-white rounded-lg shadow-md transition duration-200 hover:bg-white hover:text-indigo-700"
                   >
                     Submit
                   </button>
@@ -84,8 +84,8 @@
                     >Forgot your password?</a>
                   </p>
                   <p class="mt-4 text-center">
-                    <span class="text-gray-400">Don't have an account? </span>
-                    <label for="reg-log" class="text-yellow-400 cursor-pointer hover:text-yellow-300">
+                    <span class="text-black">Don't have an account? </span>
+                    <label for="reg-log" class="text-indigo-700 cursor-pointer hover:text-indigo-600">
                       Register here
                     </label>
                   </p>
@@ -114,7 +114,7 @@
                       required
                     />
                     <i
-                      class="fas fa-user input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                      class="fas fa-user input-icon absolute top-0 left-3 h-full flex items-center text-indigo-700"
                     ></i>
                   </div>
                   <div class="mb-4 relative">
@@ -128,7 +128,7 @@
                       required
                     />
                     <i
-                      class="fas fa-envelope input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                      class="fas fa-envelope input-icon absolute top-0 left-3 h-full flex items-center text-indigo-700"
                     ></i>
                   </div>
                   <div class="mb-4 relative">
@@ -142,7 +142,7 @@
                       required
                     />
                     <i
-                      class="fas fa-lock input-icon absolute top-0 left-3 h-full flex items-center text-yellow-400"
+                      class="fas fa-lock input-icon absolute top-0 left-3 h-full flex items-center text-indigo-700"
                     ></i>
                   </div>
                   <div class="show-password">
@@ -152,7 +152,7 @@
                   <button
                     id="registerButton"
                     type="submit"
-                    class="btn w-full py-3 mt-4 text-center bg-yellow-400 text-blue-900 rounded-lg shadow-md transition duration-200 hover:bg-blue-900 hover:text-yellow-400"
+                    class="btn w-full py-3 mt-4 text-center bg-indigo-700 text-white rounded-lg shadow-md transition duration-200 hover:bg-white hover:text-indigo-700"
                   >
                     Submit
                   </button>
@@ -160,7 +160,7 @@
                     <span class="text-gray-400">Already have an account? </span>
                     <label
                       for="reg-log"
-                      class="text-yellow-400 cursor-pointer hover:text-yellow-300"
+                      class="text-indigo-700 cursor-pointer hover:text-indigo-600"
                     >
                       Log in here
                     </label>

@@ -42,8 +42,8 @@ h6 span {
     line-height: 22px;
     letter-spacing: 0.5px;
     outline: none;
-    color: #c4c3ca;
-    background-color: #1f2029;
+    color: #000;
+    background-color: #ffffff;
     border: none;
     transition: all 200ms linear;
     box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
@@ -64,7 +64,7 @@ h6 span {
     font-size: 24px;
     line-height: 48px;
     text-align: left;
-    color: #ffeba7;
+    color: #4338CA;
     transition: all 200ms linear;
 }
 
@@ -88,21 +88,21 @@ h6 span {
     justify-content: center;
     text-align: center;
     border: none;
-    background-color: #ffeba7;
-    color: #102770;
+    background-color: #4338CA;
+    color: #ffffff;
     box-shadow: 0 8px 24px 0 rgba(255, 235, 167, .2);
 }
 
 .btn:active,
 .btn:focus {
-    background-color: #102770;
-    color: #ffeba7;
+    background-color: #ffffff;
+    color: #4338CA;
     box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
 }
 
 .btn:hover {
-    background-color: #102770;
-    color: #ffeba7;
+    background-color: #ffffff;
+    color: #4338CA;
     box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
 }
 
@@ -136,7 +136,7 @@ h6 span {
 #loading-spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border-top: 4px solid #f3c232;
+    border-top: 4px solid #4338CA;
     width: 40px;
     height: 40px;
     animation: spin 1s linear infinite;
