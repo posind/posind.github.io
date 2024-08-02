@@ -1,4 +1,3 @@
-// Login
 document
   .getElementById("loginForm")
   .addEventListener("submit", async function (e) {
@@ -27,10 +26,15 @@ document
 
       if (response.ok) {
         const data = await response.json();
-        // Store the token in local storage or cookie
-        localStorage.setItem("token", data.token);
-        // Redirect to the admin dashboard
-        window.location.href = "https://pos.in.my.id/dashboard/index.html";
+        // Check if the response contains a token
+        if (data.token) {
+          // Store the token in local storage or cookie
+          localStorage.setItem("token", data.token);
+          // Redirect to the admin dashboard
+          window.location.href = "https://pos.in.my.id/dashboard/index.html";
+        } else {
+          throw new Error("Token not found in response");
+        }
       } else {
         const errorData = await response.json();
         console.error("Error:", errorData);
