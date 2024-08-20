@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/log-re.css" />
+</head>
+<body class="bg-body text-gray-300">
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="w-full max-w-md">
+      <div class="relative perspective">
+        <div class="relative w-full h-96 transition-transform duration-700 transform-style preserve-3d" id="card-3d-wrapper">
+          <!-- register -->
+          <div
+            class="absolute w-full h-auto bg-gray-700 bg-cover bg-center rounded-lg backface-hidden"
+            id="card-front">
+            <div class="flex flex-col justify-center items-center h-full p-5">
+              <form class="w-full">
+                <h4 class="mb-4 pb-3 text-center text-xl font-bold">Register</h4>
+                <div class="mb-4 relative">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                    autocomplete="off"
+                    required
+                  />
+                  <i class="fas fa-user input-icon absolute top-0 left-3 h-full flex items-center text-indigo-700"></i>
+                </div>
+                <div class="mb-4 relative">
+                  <input
+                    type="tel"
+                    id="phonenumber"
+                    name="phonenumber"
+                    placeholder="Your Phonenumber"
+                    class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                    autocomplete="off"
+                    required
+                  />
+                  <i class="fas fa-phone-alt input-icon absolute top-0 left-3 h-full flex items-center"></i>
+                </div>
+                <div class="mb-4 relative">
+                  <input
+                    type="text"
+                    id="team"
+                    name="team"
+                    placeholder="Your Team"
+                    class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                    autocomplete="off"
+                    required
+                  />
+                  <i class="fas fa-users input-icon absolute top-0 left-3 h-full flex items-center"></i>
+                </div>
+                <div class="mb-4 relative">
+                    <input
+                      type="text"
+                      id="scope"
+                      name="scope"
+                      placeholder="Your Jobdesk"
+                      class="form-style w-full px-10 py-3 bg-gray-700 rounded-lg outline-none shadow-md placeholder-gray-500"
+                      autocomplete="off"
+                      required
+                    />
+                    <i class="fas fa-briefcase input-icon absolute top-0 left-3 h-full flex items-center"></i>
+                  </div>
+                <button
+                  id="registerButton"
+                  type="submit"
+                  class="btn w-full py-3 mb-4 text-center bg-indigo-700 text-white rounded-lg shadow-md transition duration-200 hover:bg-white hover:text-indigo-700"
+                >
+                  Submit
+                </button>
+                <p class="mt-4 text-center">
+                  <span class="text-gray-400">Already have an account? </span>
+                  <a href="https://pos.in.my.id/login/" class="text-indigo-700 cursor-pointer hover:text-indigo-600">Log in here</a>
+                </p>
+              </form>
+              <div id="loading-spinner" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/register.js"></script>
+</body>
+</html>
