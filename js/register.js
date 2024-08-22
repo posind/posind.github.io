@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scope = document.getElementById("scope").value;
 
     // Validasi dasar
-    if (!username || !email || !password) {
+    if (!name || !phonenumber || !team || !scope) {
       alert("Silakan isi semua kolom.");
       return;
     }
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: name,
       phonenumber: phonenumber,
       team: team,
+      scope: scope,
     };
 
     // Tampilkan spinner loading
