@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     // Ambil nilai input dari form
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const name = document.getElementById("name").value;
+    const phonenumber = document.getElementById("phonenumber").value;
+    const team = document.getElementById("team").value;
+    const scope = document.getElementById("scope").value;
 
     // Validasi dasar
     if (!username || !email || !password) {
@@ -19,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Persiapkan data yang akan dikirim ke server
     const data = {
-      username: username,
-      email: email,
-      password: password,
+      name: name,
+      phonenumber: phonenumber,
+      team: team,
     };
 
     // Tampilkan spinner loading
@@ -46,9 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Opsi untuk menyimpan token jika diperlukan
             // localStorage.setItem("token", response.data.token);
             // Reset form setelah pendaftaran berhasil
-            document.getElementById("username").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("password").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("phonenumber").value = "";
+            document.getElementById("team").value = "";
+            document.getElementById("scope").value = "";
           } else {
             alert("Pendaftaran: " + response.data.message);
           }
