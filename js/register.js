@@ -58,11 +58,3 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     );
   });
-
-  document
-    .getElementById("show-password-register")
-    .addEventListener("change", function () {
-      const password = document.getElementById("password");
-      password.type = this.checked ? "text" : "password";
-    });
-});
