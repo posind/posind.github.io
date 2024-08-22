@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Validasi dasar
     if (!username || !email || !password) {
-      alert("Silakan isi semua field.");
+      alert("Silakan isi semua kolom.");
       return;
     }
 
