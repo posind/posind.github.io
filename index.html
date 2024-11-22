@@ -46,11 +46,14 @@
                   </div> -->
                 </div>
                 <div class="w-auto hidden lg:block">
-                  <div class="inline-block">
-                    <a href="https://pos.in.my.id/login/" class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200" type="button">Anda Admin? Login</a>
-
+                  <div class="flex items-center space-x-3"> <!-- Flex untuk sejajar -->
+                    <p class="text-gray-700 font-medium">Anda Admin?</p>
+                    <a href="https://pos.in.my.id/login/" 
+                       class="py-3 px-6 text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"  type="button">
+                       Login
+                    </a>
                   </div>
-                </div>                                      
+                </div>                                                    
                 <div class="w-auto lg:hidden">
                   <button x-on:click="mobileNavOpen = !mobileNavOpen">
                     <svg class="text-indigo-600" width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
