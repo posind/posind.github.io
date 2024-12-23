@@ -3,7 +3,7 @@
     padding: 1rem 1.5rem;
     color: #ffffff;
     font-weight: 600;
-    border: 2px solid transparent; /* Menghilangkan border color default */
+    border: 2px solid transparent; 
     border-radius: 0.75rem;
     background-color: #3edd09ec;
     transition: background-color 0.2s ease-in-out, ring-color 0.2s ease-in-out;
@@ -18,7 +18,7 @@
     padding: 1rem 1.5rem;
     color: #ffffff;
     font-weight: 600;
-    border: 2px solid transparent; /* Menghilangkan border color default */
+    border: 2px solid transparent; 
     border-radius: 0.75rem;
     background-color: #0099ff;
     transition: background-color 0.2s ease-in-out, ring-color 0.2s ease-in-out;
@@ -28,7 +28,6 @@
     ring-color: rgba(0, 153, 255, 0.3);
   }
   
-  /* Tambahkan margin-bottom untuk tombol pada tampilan mobile */
   @media (max-width: 640px) {
     .btn-whatsapp,
     .btn-telegram {
@@ -36,7 +35,6 @@
     }
   }
   
-  /* Pastikan kontainer tombol tidak saling bertumpuk */
   .button-container {
     display: flex;
     flex-wrap: wrap;
